@@ -82,13 +82,13 @@ async function submitForm() {
   
   const temasLower = ingredientes.map(t => t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''));
 
-const matrixTrigger = temasLower.includes('pipula azul') && 
-                      temasLower.includes('pipula vermelha') && 
+const matrixTrigger = temasLower.includes('pilula azul') && 
+                      temasLower.includes('pilula vermelha') && 
                       temasLower.includes('matrix');
 
 if (matrixTrigger) {
   localStorage.setItem('easter-egg', 'matrix');
-  alert('💊 Bem-vindo à Matrix...');
+  alert('💊 O que é real? Como você define o real? Você esta preparado pro desperta? Esse é o Matrix...');
   location.reload();
   return;
 }
@@ -186,7 +186,7 @@ if (title) {
     clickCount++;
     if (clickCount === 7) {
       localStorage.setItem('easter-egg', 'harry');
-      alert('🧙‍♂️ Magia ativada! Tema de Harry Potter carregado.');
+      alert('🧙‍♂️ Alomoha! Espectum Patrono Tema de Harry Potter carregado.');
       location.reload();
     }
     setTimeout(() => clickCount = 0, 2000); // reseta após 2s sem clicar
