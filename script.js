@@ -91,7 +91,7 @@ function applyTheme(theme) {
 
   if (theme === 'dark') {
     body.classList.remove(
-      'bg-violet-400',
+      'bg-violet-200',
       'light-theme', 'text-purple-950'
     );
     body.classList.add(
@@ -103,7 +103,7 @@ function applyTheme(theme) {
       'bg-purple-700',  'text-white'
     );
     body.classList.add(
-      'bg-violet-400', 
+      'bg-violet-200', 
       'light-theme', 'text-purple-800'
     );
     themeBtn.textContent = '🌙 Tema Escuro';
