@@ -58,11 +58,7 @@ async function submitForm() {
   // Mostra loading animado
   responseDiv.innerHTML = `
     <div id="loading" class="text-center py-4">
-      <svg class="animate-spin h-6 w-6 text-blue-600 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
-      </svg>
-      <p class="text-gray-600 mt-2">Gerando Recomendações...</p>
+      <p class="text-white mt-2">Gerando Recomendações...</p>
     </div>`;
   responseDiv.classList.remove('hidden');
 
@@ -95,19 +91,19 @@ function applyTheme(theme) {
 
   if (theme === 'dark') {
     body.classList.remove(
-      'bg-gradient-to-br', 'from-violet-300', 'via-purple-400', 'to-fuchsia-500',
-      'light-theme', 'text-purple-800'
+      'bg-violet-400',
+      'light-theme', 'text-purple-950'
     );
     body.classList.add(
-      'bg-gradient-to-br', 'from-violet-600', 'via-purple-700', 'to-fuchsia-900', 'text-white'
+      'bg-purple-700', 'text-white'
     );
     themeBtn.textContent = '☀️ Tema Claro';
   } else {
     body.classList.remove(
-      'bg-gradient-to-br', 'from-violet-600', 'via-purple-700', 'to-fuchsia-900', 'text-white'
+      'bg-purple-700',  'text-white'
     );
     body.classList.add(
-      'bg-gradient-to-br', 'from-violet-300', 'via-purple-400', 'to-fuchsia-500',
+      'bg-violet-400', 
       'light-theme', 'text-purple-800'
     );
     themeBtn.textContent = '🌙 Tema Escuro';
@@ -144,3 +140,11 @@ document.addEventListener('DOMContentLoaded', () => {
     applyTheme(saved);
   }
 });
+
+
+window.addEventListener('load', () => {
+    const footer = document.getElementById('site-footer');
+    footer.classList.remove('opacity-0', 'translate-y-10');
+    footer.classList.add('opacity-100', 'translate-y-0');
+  });
+

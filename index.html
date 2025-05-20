@@ -27,11 +27,11 @@
 </style>
 
 </head>
-<body class="flex items-center justify-center min-h-screen bg-gradient-to-br from-violet-700 via-purple-600 to-fuchsia-800 font-sans py-8 px-4">
+<body class="flex items-center justify-center min-h-screen bg-violet-700 font-serif py-8 px-4 mb-10">
   <div class="container max-w-4xl mx-auto text-center p-4">
-    <h1 class="text-3xl sm:text-4xl font-extrabold mb-8 text-purple-50 drop-shadow-md text-theme">Gerador de Recomendações com IA</h1>
-
-    <button id="toggle-theme" class="absolute top-4 right-4 bg-white bg-opacity-30 hover:bg-opacity-50 text-purple-900 dark:text-white font-bold py-2 px-4 rounded-lg transition duration-300 shadow">
+    <h1 class="text-4xl sm:text-5xl font-extrabold mb-8 text-purple-50 drop-shadow-md text-theme">Entre Páginas e Telas</h1>
+    <h2 class="text-2xl sm:text-1xl font-extrabold mb-8 text-purple-50 drop-shadow-md text-theme">Os melhores filmes e livros voce encontra aqui</h2>
+    <button id="toggle-theme" class="absolute top-4 right-4 bg-white bg-opacity-30 hover:bg-opacity-50 text-purple-950 dark:text-white font-bold py-2 px-4 rounded-lg transition duration-300 shadow">
       🌙 Tema Escuro
     </button>
 
@@ -67,17 +67,45 @@
       </div>
     </div>
 
-    <div id="response" class="bg-purple-800 bg-opacity-90 p-6 rounded-2xl shadow-lg border border-purple-300 mt-6 text-left hidden max-w-3xl mx-auto">
-      <div id="loading" class="text-center py-6 hidden">
-        <div class="flex justify-center items-center space-x-4 animate-pulse">
-          <div class="w-2 h-12 bg-purple-600 rounded-full animate-[bounce_0.6s_infinite] origin-bottom"></div>
-          <div class="w-2 h-16 bg-blue-500 rounded-full animate-[bounce_0.7s_infinite] origin-bottom"></div>
-          <div class="w-2 h-12 bg-green-500 rounded-full animate-[bounce_0.8s_infinite] origin-bottom"></div>
-        </div>
-        <p class="text-purple-800 mt-4 font-semibold text-lg">Carregando recomendações ...</p>
+    <div id="response" class="bg-purple-800 bg-opacity-90 p-6 rounded-2xl shadow-lg border border-purple-300 mt-6 text-left hidden max-w-4xl mx-auto">
+        <p class="text-white mt-4 font-semibold text-lg">Carregando recomendações ...</p>
     </div>
     </div>
   </div>
+<footer id="site-footer" class="fixed bottom-0 left-0 w-full bg-white dark:bg-gray-900 text-purple-800 dark:text-purple-200 py-3 border-t border-purple-300 dark:border-purple-700 shadow-inner z-50 text-sm opacity-0 translate-y-10 transition-all duration-1000">
+  <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
+    
+    <div class="text-center sm:text-left">
+      <p class="font-semibold">
+        Desenvolvido por 
+        <span id="username" class="text-fuchsia-700 dark:text-fuchsia-400">Julia Rosa</span>
+      </p>
+      <p class="italic text-xs">Recomendações geradas com IA via API</p>
+    </div>
+
+    <div class="flex space-x-4 mt-2 sm:mt-0">
+      <a href="https://github.com/JuliaRosa0401" target="_blank" class="hover:text-fuchsia-600 transition transform hover:scale-110 duration-300" aria-label="GitHub">
+        <!-- GitHub SVG -->
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+          <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.3.8-.6v-2.1c-3.1.7-3.8-1.5-3.8-1.5-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.6 1.2 1.6 1.2 1 .1.8-1 .8-1.6-.8-.1-1.7-.4-1.7-1.7 0-.4.2-.7.4-1C5.3 14 7 14.6 8 14.7c.1-.3.2-.6.4-.8-2.5-.3-5.1-1.3-5.1-5.8 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 2 1.2 3.3 0 4.5-2.6 5.5-5.1 5.8.3.2.5.6.5 1.2v3.4c0 .3.2.7.8.6A10.5 10.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+        </svg>
+      </a>
+      <a href="https://linkedin.com/in/julia-rosa-040108jmr" target="_blank" class="hover:text-fuchsia-600 transition transform hover:scale-110 duration-300" aria-label="LinkedIn">
+        <!-- LinkedIn SVG -->
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+          <path d="M4.98 3.5C4.98 4.6 4.1 5.5 3 5.5S1 4.6 1 3.5 1.9 1.5 3 1.5s1.98.9 1.98 2zM2 8.5h2V22H2V8.5zm6.5 0h1.9v1.8h.03c.27-.5.92-1.03 1.89-1.03 2.02 0 2.4 1.33 2.4 3.07V22H12V13.3c0-1.3-.02-3-1.83-3-1.84 0-2.12 1.44-2.12 2.9V22H6.5V8.5z"/>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/jr.dialy/#" target="_blank" class="hover:text-fuchsia-600 transition transform hover:scale-110 duration-300" aria-label="Instagram">
+        <!-- Instagram SVG -->
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+          <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4zm0 1.7a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm4.6-.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
 
   <script src="./script.js" defer></script>
 </body>
